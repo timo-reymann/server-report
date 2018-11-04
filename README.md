@@ -34,10 +34,11 @@ sudo ./dist/installer.sh
 ```
 
 ## Configuration
-The configuration for the report tool is under `/opt/server-report/config`
+The configuration for the report tool is under `/opt/server-report/`
 After installation there is only `config.sample`, you will need root permissions to copy it, afterwards you can modify it to fit your needs.
 
 Currently the following options are available:
+
 | Key | Value |
 | :----  | :---- |
 | WARN_DISK_USAGE     | When would you like to get a warn in the report for a disk?     |
