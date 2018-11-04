@@ -53,12 +53,14 @@ Currently, the following functions are ready to use:
 | Function           |  Parameters/Usage                                                                                                                 |
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
 | get_disk_space     |  Expects device name or pattern and returns the used volume size in percent                                                       |
-| output             |  Output some value to the report, use this over echo when possible, because this is included in logfiles and internal methods too |
+| output             |  Output some value to the report, prefer this over echo when possible, because this is included in logfiles and internal methods too |
 | get_output         |  Returns the current outputs as string                                                                                            |
 | get_memory_value   |  Get memory value from /proc/meminfo by its key                                                                                   |
 | format_byte_value  |  Format byte value passed via first parameter and append MB to output                                                             |
 | part_heading       |  Print partial heading for part of script                                                                                         |
 | indent             |  Format line with indent to regular indentation, in plugins this already done for stdout, so you will produce a "double indent"   |
+
+If you need some examples feel free to visit the [sample plugins](./plugins.samples), if you have some example you would like to see their, simply submit a pull request.
 
 ## Usage
 You now have an root-only command `report`, this can be used in cron jobs etc.
@@ -66,4 +68,5 @@ You now have an root-only command `report`, this can be used in cron jobs etc.
 You can also took a look at the [samples](./samples)
 
 ## Contributing
-Have a cool plugin you would like to see enabled by default? - Just submit a pull request and place it in the plugins folder, and i will add it. Currently their is none, but feel free to create it. If you have any further questions, simply open an issue or throw me an mail
+Have a cool plugin you would like to see enabled by default? - Just submit a pull request and place it in the plugins.samples folder, and i will add it.
+If you have any further questions, simply open an issue or throw me an mail
