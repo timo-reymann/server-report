@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # This example dumps the last backup from /backup assuming
 # that the log files are always named YYY-MM-DD 
 
