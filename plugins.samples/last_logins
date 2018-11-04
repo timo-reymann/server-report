@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#
+# This script prints the last successful logins on your system
+#
+output "$(last)"
+
