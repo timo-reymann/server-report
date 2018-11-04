@@ -8,7 +8,7 @@ An simple, extendable yet powerful reporting tool for your debian-based server.
 - Debian based distribuion
 - root permissions
 
-## Whats in the box?
+## What is in the box?
 - Time/Date check 
 - Disk usage + warning if its over x %
 - RAM Usage 
@@ -44,7 +44,7 @@ Currently the following options are available:
 | WARN_DISK_USAGE     | When would you like to get a warn in the report for a disk?     |
 | DISKS_TO_CHECK     | Patterns, or devicenames for disk usage check     |
 
-but you can also, and i recommend this, place your configuration for self made plugins there.
+but you can also, and I recommend this, place your configuration for self made plugins there.
 
 ## Custom Plugins
 Plugins are just simple bash files, placed in `/opt/server-report/plugins`, owned by root.
