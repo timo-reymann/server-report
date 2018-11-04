@@ -15,5 +15,8 @@ tar cJf $TARGET_DIR/installer.tar.xz --directory=src run.sh config.sample
 # Append tar to installer
 cat $TARGET_DIR/installer.tar.xz >> $TARGET_DIR/installer.sh
 
+# Remove old tar archive in favor for instlal script only
+rm $TARGET_DIR/*.tar.xz
+
 # Make installer executable
 chmod +x $TARGET_DIR/installer.sh
