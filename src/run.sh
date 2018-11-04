@@ -83,7 +83,7 @@ do
     then
         output "$disk: WARNING. Over $WARN_DISK_USAGE % disk usage!" | indent
     else
-        output "$disk: OK ($FREE_DISK_SPACE %) ." | indent
+        output "$disk: OK ($FREE_DISK_SPACE %)" | indent
     fi
 
 done
