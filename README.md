@@ -2,7 +2,7 @@ Server-Report
 ===
 
 ## What is this?
-An simple, extendable jet powerful reporting tool for your debian-based server.
+An simple, extendable yet powerful reporting tool for your debian-based server.
 
 ## Requirements
 - Debian based distribuion
@@ -12,18 +12,30 @@ An simple, extendable jet powerful reporting tool for your debian-based server.
 - Time/Date check 
 - Disk usage + warning if its over x %
 - RAM Usage 
-- Swag Usage
+- Swap Usage
 - Available Updates 
 - Docker stats - see a snapshot from whats up and running
 - Extend with plugins as you like
 - Ready for usage with mail reporting and/or cronjobs 
 
 ## Installation
-Documentation WIP
+### Pre-compiled
+```bash
+curl -s -L https://cdn.timo-reymann.de/public/server-report/installer.sh | sudo bash
+```
+
+### If you would like to build and install it your self:
+```bash
+git clone https://github.com/timo-reymann/server-report.git
+cd server-report
+chmod +x build.sh
+./build.sh
+sudo ./dist/installer.sh
+```
 
 ## Configuration
 The configuration for the report tool is under `/opt/server-report/config`
-After installation their is only `config.sample`, you will need root permissions to copy it, afterwards you can modify it to fit your needs.
+After installation there is only `config.sample`, you will need root permissions to copy it, afterwards you can modify it to fit your needs.
 
 Currently the following options are available:
 | Key | Value |
@@ -31,7 +43,7 @@ Currently the following options are available:
 | WARN_DISK_USAGE     | When would you like to get a warn in the report for a disk?     |
 | DISKS_TO_CHECK     | Patterns, or devicenames for disk usage check     |
 
-but you can also, and i recommend this, place your configuration for self made plugins their.
+but you can also, and i recommend this, place your configuration for self made plugins there.
 
 ## Custom Plugins
 Plugins are just simple bash files, placed in `/opt/server-report/plugins`, owned by root.
