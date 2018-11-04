@@ -1,0 +1,3 @@
+WARN_DISK_USAGE="70"
+DISKS_TO_CHECK=( 'sda1')
+
