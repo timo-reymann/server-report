@@ -12,9 +12,7 @@ if [ "$(whoami)" != "root" ]; then
         exit -1
 fi
 
-echo ""
-echo "ServerReport installer"
-echo ""
+echo "Starting ServerReport installer ..."
 
 
 echo "Creating install location at $INSTALL_LOCATION ..."
@@ -23,7 +21,7 @@ mkdir -p $INSTALL_LOCATION
 
 # Find __ARCHIVE__ maker, read archive content and decompress it
 ARCHIVE=$(awk '/^__ARCHIVE__/ {print NR + 1; exit 0; }' "${0}")
-tail -n+${ARCHIVE} "${0}" | tar xpJv -C ${INSTALL_LOCATION}
+tail -n+${ARCHIVE} "${0}" | tar xpJ -C ${INSTALL_LOCATION}
 
 
 echo "Creating plugins folder, if not already present ..."
@@ -41,7 +39,7 @@ ln -sf /opt/server-report/run.sh $LINK_TO/report
 
 
 # Exit before marker
-echo "Done."
+echo -e "\nDone."
 exit 0
 
 

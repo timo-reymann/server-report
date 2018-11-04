@@ -7,7 +7,7 @@ rm -rf $TARGET_DIR
 mkdir $TARGET_DIR
 
 # Copy installer to final filename
-cp ./install.sh $TARGET_DIR/installer.sh
+cp ./src/installer.sh $TARGET_DIR/installer.sh
 
 # Create tar file with relevant files from src
 tar cJf $TARGET_DIR/installer.tar.xz --directory=src run.sh config.sample
