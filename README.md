@@ -63,5 +63,7 @@ Currently, the following functions are ready to use:
 ## Usage
 You now have an root-only command `report`, this can be used in cron jobs etc.
 
+You can also took a look at the [samples](./samples)
+
 ## Contributing
 Have a cool plugin you would like to see enabled by default? - Just submit a pull request and place it in the plugins folder, and i will add it. Currently their is none, but feel free to create it. If you have any further questions, simply open an issue or throw me an mail

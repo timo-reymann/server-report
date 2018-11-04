@@ -4,14 +4,14 @@ Daily Mail Report
 ## Requirements
 If you dont have an mail server or your mail server hosted inside docker you can use `sendemail`. 
 To install it, simply run:
-```
+```bash
 sudo apt install sendemail -y
 ```
 
 ## Script
 Create a script, call it how you like and change ownership to root, the following is an example of how to use send**e**mail
 
-```
+```bash
 #!/bin/bash
 sendemail -f hostname@yourserver.tld \
           -t 'admin@yourserver.tld' \
