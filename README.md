@@ -21,7 +21,7 @@ An simple, extendable yet powerful reporting tool for your debian-based server.
 ## Installation
 ### Pre-compiled
 ```bash
-curl -s -L https://cdn.timo-reymann.de/public/server-report/installer.sh > install.sh && chmod +x install.sh && sudo ./install.sh && rm install.sh
+curl -s -L https://github.com/timo-reymann/server-report/raw/master/dist/installer.sh > install.sh && chmod +x install.sh && sudo ./install.sh && rm install.sh
 ```
 
 ### If you would like to build and install it your self:
