@@ -60,5 +60,8 @@ Currently, the following functions are ready to use:
 | part_heading       |  Print partial heading for part of script                                                                                         |
 | indent             |  Format line with indent to regular indentation, in plugins this already done for stdout, so you will produce a "double indent"   |
 
+## Usage
+You now have an root-only command `report`, this can be used in cron jobs etc.
+
 ## Contributing
 Have a cool plugin you would like to see enabled by default? - Just submit a pull request and place it in the plugins folder, and i will add it. Currently their is none, but feel free to create it. If you have any further questions, simply open an issue or throw me an mail
