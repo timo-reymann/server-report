@@ -2,7 +2,7 @@
 
 #
 # This script simply counts all lines from authentication log and finds out
-# how many failed logins it gave on your server today
+# how many failed logins it gave on your server since last log rotation
 #
 output "Failed login count: $(cat /var/log/auth.log | grep 'Failed password' | wc -l)"
 
