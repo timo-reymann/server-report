@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #
-# This script simply counts all lines from authentication log and finds out
-# how many failed logins it gave on your server since last log rotation
+# This script counts all failed logins for the current day 
 #
-output "Failed login count: $(cat /var/log/auth.log | grep 'Failed password' | wc -l)"
+
+failed_login_count=$(cat /var/log/auth.log | grep 'Failed password' | grep "$(date +"%b")  $(date +'%-d')" | wc -l)
+output "Failed login count: $(echo $failed_login_count)"
 
