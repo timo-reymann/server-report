@@ -15,10 +15,10 @@ Create a script, call it how you like and change ownership to root, the followin
 #!/bin/bash
 sendemail -f hostname@yourserver.tld \
           -t 'admin@yourserver.tld' \
-          -u "Report - $(date +%Y-%m-%d)"
-          -s "localhost" 
+          -u "Report - $(date +%Y-%m-%d)" \
+          -s "localhost" \
           -m "Hi Admin,\nhere is your daily report:\n$(report)" \
-          -xu "no-reply@yourserver.tld" 
+          -xu "no-reply@yourserver.tld" \
           -xp "<your password>" \
           -o message-charset="utf-8" 
 ```
