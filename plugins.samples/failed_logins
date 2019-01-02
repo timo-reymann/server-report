@@ -1,9 +1,10 @@
 #!/bin/bash
-
 #
-# This script counts all failed logins for the current day 
+# This script counts all failed logins of all time and yesterday 
 #
 
-failed_login_count=$(cat /var/log/auth.log | grep 'Failed password' | grep "$(date +"%b")  $(date +'%-d')" | wc -l)
-output "Failed login count: $(echo $failed_login_count)"
+failed_login_count_all_time=$(cat /var/log/auth.log | grep 'Failed password' | wc -l)
+failed_login_count_yesterday=$(cat /var/log/auth.log | grep 'Failed password' | grep "$(date -d "yesterday" '+%b')  $(date -d "yesterday" '+%-d')" | wc -l) 
 
+output "Failed login count all time: $(echo $failed_login_count_all_time)"
+output "Failed login count yesterday: $(echo $failed_login_count_yesterday)"
