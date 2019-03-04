@@ -117,7 +117,7 @@ then
     exit 0
 fi
 
-output "$(docker stats  --no-stream --no-trunc)" | indent
+output "$(docker stats --no-stream --format 'table {{.Name}}\t{{.MemPerc}}\t{{.CPUPerc}}\t{{.NetIO}}\t{{.BlockIO}}')" | indent
 
 
 # Plugins
