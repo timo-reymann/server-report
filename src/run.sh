@@ -107,7 +107,7 @@ output "$( /usr/lib/update-notifier/apt-check --human-readable)" | indent
 
 
 # Docker status, if installed
-part_heading "DOCKER STATUS"
+part_heading "DOCKER STATS"
 
 which docker > /dev/null
 

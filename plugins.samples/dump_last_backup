@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # This example dumps the last backup from /backup assuming
-# that the log files are always named YYY-MM-DD 
+# that the log files are always named YYY-MM-DD
 
-cat $(ls  /backup/*.log | sort -r | head -n 1)
+basename $(ls  /backup/*.log | sort -r | head -n 1) | awk -F. '{print $1}'
