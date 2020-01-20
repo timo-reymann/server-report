@@ -35,7 +35,7 @@ chmod -R 770 $INSTALL_LOCATION
 
 # Create symlink
 echo "Linking report script to $LINK_TO ..."
-ln -sf /opt/server-report/run.sh $LINK_TO/report
+ln -sf $INSTALL_LOCATION/run.sh $LINK_TO/report
 
 
 # Exit before marker
